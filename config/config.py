@@ -27,6 +27,27 @@ class Config:
     METADATA_PATH = os.path.join(VECTOR_DB_DIR, 'faiss_metadata.json')
     DOCUMENT_MAPPING_PATH = os.path.join(VECTOR_DB_DIR, 'document_mapping.json')
 
+    # LLM Settings
+    GROQ_MODEL = os.getenv('GROQ_MODEL', 'llama3-8b-8192')
+    MAX_TOKENS = int(os.getenv('MAX_TOKENS', 1024))
+    TEMPERATURE = float(os.getenv('TEMPERATURE', 0.3))
+
+    # Retrieval Settings
+    TOP_K_RETRIEVAL = int(os.getenv('TOP_K_RETRIEVAL', 5))
+    SIMILARITY_THRESHOLD = float(os.getenv('SIMILARITY_THRESHOLD', 0.3))
+    MAX_CONTEXT_LENGTH = int(os.getenv('MAX_CONTEXT_LENGTH', 4000))# LLM Settings
+    GROQ_MODEL = os.getenv('GROQ_MODEL', 'llama3-8b-8192')
+    MAX_TOKENS = int(os.getenv('MAX_TOKENS', 1024))
+    TEMPERATURE = float(os.getenv('TEMPERATURE', 0.3))
+
+    # Retrieval Settings
+    TOP_K_RETRIEVAL = int(os.getenv('TOP_K_RETRIEVAL', 5))
+    SIMILARITY_THRESHOLD = float(os.getenv('SIMILARITY_THRESHOLD', 0.3))
+    MAX_CONTEXT_LENGTH = int(os.getenv('MAX_CONTEXT_LENGTH', 4000))
+
+    # Response Settings
+    ENABLE_STREAMING = os.getenv('ENABLE_STREAMING', 'true').lower() == 'true'
+
     # Create directories if they don't exist
     @staticmethod
     def create_directories():

@@ -92,3 +92,69 @@ MIT License
 ---
 
 **Phase 1 Complete**: Document processing, chunking, embedding, and vector storage ready!
+
+
+## Phase 2: Query Processing & LLM Integration ✅
+
+### New Features Added:
+- **Complete RAG Pipeline**: End-to-end question answering
+- **Groq LLM Integration**: Fast, cost-effective text generation
+- **Smart Context Retrieval**: Relevance-based chunk selection
+- **Streaming Responses**: Real-time answer generation
+- **Web Interface**: User-friendly Streamlit app
+- **CLI Tool**: Command-line interface for testing
+
+### Additional Scripts:
+- `scripts/query_cli.py` - Interactive command-line interface
+- `scripts/test_rag_pipeline.py` - Pipeline testing utilities
+- `app/streamlit_app.py` - Web-based chat interface
+
+### Usage (Phase 2):
+
+#### Command Line Interface:
+```bash
+# Interactive mode
+python scripts/query_cli.py
+
+# Single query mode
+python scripts/query_cli.py "What is the main topic discussed?"
+```
+
+#### Web Interface:
+```bash
+# Start Streamlit app
+streamlit run app/streamlit_app.py
+```
+
+#### Test Pipeline:
+```bash
+python scripts/test_rag_pipeline.py
+```
+
+### Configuration:
+Add these to your `.env` file:
+```bash
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama3-8b-8192
+TOP_K_RETRIEVAL=5
+SIMILARITY_THRESHOLD=0.3
+ENABLE_STREAMING=true
+```
+
+---
+
+## 🔄 Complete Workflow
+
+### Phase 1: Build Index
+```bash
+python scripts/build_index.py
+```
+
+### Phase 2: Query Documents
+```bash
+# CLI
+python scripts/query_cli.py
+
+# Web App  
+streamlit run app/streamlit_app.py
+```
