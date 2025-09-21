@@ -1,0 +1,23 @@
+# Core RAG System Dependencies
+langchain
+langchain-community
+sentence-transformers
+faiss-cpu
+groq
+python-dotenv
+
+# Document Processing
+pypdf
+docx2txt
+
+# Data Processing & ML
+numpy
+torch
+transformers
+
+# Web Interface
+streamlit
+streamlit-chat
+
+# Utilities
+tiktoken
